@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import AddUser from "./component/User/AddUser"
  import UserList from './component/User/UserList'
+import Portal from "./Protal"
 function App() {
    
      const [userList , setUserList ] = useState([])
@@ -14,8 +15,10 @@ function App() {
      }
   return (
     <div>
+    
       <AddUser onAddUser={addUserHandler}/>
      <UserList  users={userList}/>
+     <Portal/>
     </div>
   );
 }
